@@ -1,25 +1,13 @@
-//½ÇÇè¿ë
+//ì‹¤í—˜ìš©
 INSERT INTO USER_INFO (user_id,user_pw,user_email,user_phone,user_name,user_sex,user_age,user_date)
 VALUES ('1','1','1','1','1','M','1997-03-13','2023-11-06');
 
 DELETE FROM USER_INFO WHERE user_ID = 1;
 DELETE FROM review WHERE review_id = 1;
 
-//´ñ±Û
-INSERT INTO review(review_ID,user_id,CITY_ID,review_TITLE,review_comment)
-VALUES (1,'1',1,'1','1');
-INSERT INTO review(review_ID,user_id,CITY_ID,review_TITLE,review_comment)
-VALUES (2,'1',1,'1','1');
-INSERT INTO review(review_ID,user_id,CITY_ID,review_TITLE,review_comment)
-VALUES (3,'1',1,'1','1');
-INSERT INTO review(review_ID,user_id,CITY_ID,review_TITLE,review_comment)
-VALUES (4,'1',1,'1','1');
-INSERT INTO review(review_ID,user_id,CITY_ID,review_TITLE,review_comment)
-VALUES (5,'1',1,'1','1');
+//ëŒ“ê¸€
 
-
-
- 
+  
 CREATE TABLE review(
     review_ID INT PRIMARY KEY,
     user_id VARCHAR2(20) NOT NULL,
@@ -36,16 +24,31 @@ CREATE TABLE review(
         ON DELETE CASCADE
     );
     
+ 
+INSERT INTO review(review_ID,user_id,CITY_ID,review_TITLE,review_comment)
+VALUES (1,'1',1,'1','1');
+INSERT INTO review(review_ID,user_id,CITY_ID,review_TITLE,review_comment)
+VALUES (2,'1',1,'1','1');
+INSERT INTO review(review_ID,user_id,CITY_ID,review_TITLE,review_comment)
+VALUES (3,'1',1,'1','1');
+INSERT INTO review(review_ID,user_id,CITY_ID,review_TITLE,review_comment)
+VALUES (4,'1',1,'1','1');
+INSERT INTO review(review_ID,user_id,CITY_ID,review_TITLE,review_comment)
+VALUES (5,'1',1,'1','1');
+
+
+
+
     
 
-//µµ½Ã
+//ë„ì‹œ
 CREATE TABLE CITY_ID (
     CITY_ID number PRIMARY KEY NOT NULL,
     CITY_NAME VARCHAR2(30) NOT NULL,
     CITY_TIP CLOB
     );
 
-//À¯Àú Á¤º¸
+//ìœ ì € ì •ë³´
 CREATE TABLE USER_INFO (
     user_id VARCHAR2(20) PRIMARY KEY NOT NULL,
     user_pw VARCHAR2(20) NOT NULL,
@@ -57,7 +60,7 @@ CREATE TABLE USER_INFO (
     user_date date
     );
     
-//½Ä´ç
+//ì‹ë‹¹
 
 CREATE TABLE RESTAURANT (
     res_id NUMBER primary key NOT NULL,
@@ -122,37 +125,37 @@ CREATE TABLE TOUR (
         ON DELETE CASCADE
     );
 
-//µµ½Ã INSERT
+//ë„ì‹œ INSERT
 INSERT INTO CITY_ID(CITY_ID,CITY_NAME,CITY_TIP)
-VALUES (27,'OSAKA','¿ì¿Í');
+VALUES (27,'OSAKA','ìš°ì™€');
 INSERT INTO CITY_ID(CITY_ID,CITY_NAME,CITY_TIP)
-VALUES (1,'Sapporo','¿ì¿Í');
+VALUES (1,'Sapporo','ìš°ì™€');
 INSERT INTO CITY_ID(CITY_ID,CITY_NAME,CITY_TIP)
-VALUES (42,'NagaSSaki','¿ì¿Í');
+VALUES (42,'NagaSSaki','ìš°ì™€');
 INSERT INTO CITY_ID(CITY_ID,CITY_NAME,CITY_TIP)
-VALUES (13,'Tokyo','¿ì¿Í');
+VALUES (13,'Tokyo','ìš°ì™€');
 INSERT INTO CITY_ID(CITY_ID,CITY_NAME,CITY_TIP)
-VALUES (22,'Shizuoka','¿ì¿Í');
+VALUES (22,'Shizuoka','ìš°ì™€');
 INSERT INTO CITY_ID(CITY_ID,CITY_NAME,CITY_TIP)
-VALUES (26,'Kyoto','¿ì¿Í');
+VALUES (26,'Kyoto','ìš°ì™€');
 INSERT INTO CITY_ID(CITY_ID,CITY_NAME,CITY_TIP)
-VALUES (23,'Nagoya','¿ì¿Í');
+VALUES (23,'Nagoya','ìš°ì™€');
 INSERT INTO CITY_ID(CITY_ID,CITY_NAME,CITY_TIP)
-VALUES (40,'Fukuoka','¿ì¿Í');
-//µµ½Ã UPDATE
+VALUES (40,'Fukuoka','ìš°ì™€');
+//ë„ì‹œ UPDATE
         
-UPDATE CITY_ID SET CITY_TIP='¿À';
+UPDATE CITY_ID SET CITY_TIP='ì˜¤';
 
-//µµ½Ã »èÁ¦
+//ë„ì‹œ ì‚­ì œ
 DELETE FROM CITY_ID WHERE CITY_ID = 1;
-//½Ä´ç ½ÃÄö½º
+//ì‹ë‹¹ ì‹œí€€ìŠ¤
 CREATE SEQUENCE res_seq
   START WITH 1
   INCREMENT BY 1
   NOCACHE
   NOCYCLE;
 
-//½Ä´ç Æ®¸®°Å
+//ì‹ë‹¹ íŠ¸ë¦¬ê±°
 CREATE OR REPLACE TRIGGER res_trigger
 BEFORE INSERT ON RESTAURANT
 FOR EACH ROW
@@ -162,14 +165,14 @@ BEGIN
   FROM dual;
 END;
 /
-//¼÷¼Ò ½ÃÄö½º
+//ìˆ™ì†Œ ì‹œí€€ìŠ¤
 CREATE SEQUENCE acc_seq
     START WITH 1
   INCREMENT BY 1
   NOCACHE
   NOCYCLE;
   
-//¼÷¼Ò Æ®¸®°Å
+//ìˆ™ì†Œ íŠ¸ë¦¬ê±°
 CREATE OR REPLACE TRIGGER acc_trigger
 BEFORE INSERT ON ACCOMODATION
 FOR EACH ROW
@@ -180,20 +183,38 @@ BEGIN
 END;
 /
 
-//°ü±¤Áö ½ÃÄö½º
+//ê´€ê´‘ì§€ ì‹œí€€ìŠ¤
 CREATE SEQUENCE tour_seq
     START WITH 1
     INCREMENT BY 1
     NOCACHE
     NOCYCLE;
     
-//°ü±¤Áö Æ®¸®°Å
+//ê´€ê´‘ì§€ íŠ¸ë¦¬ê±°
 CREATE OR REPLACE TRIGGER tour_trigger
 BEFORE INSERT ON TOUR
 FOR EACH ROW
 BEGIN
     SELECT tour_seq.NEXTVAL
     INTO :NEW.tour_id
+    FROM dual;
+END;
+/
+
+//ë¦¬ë·° ì‹œí€€ìŠ¤
+CREATE SEQUENCE review_seq
+    START WITH 1
+    INCREMENT BY 1
+    NOCACHE
+    NOCYCLE;
+
+//ê´€ê´‘ì§€ íŠ¸ë¦¬ê±°
+CREATE OR REPLACE TRIGGER review_trigger
+BEFORE INSERT ON review
+FOR EACH ROW
+BEGIN
+    SELECT review_seq.NEXTVAL
+    INTO :NEW.review_id
     FROM dual;
 END;
 /
