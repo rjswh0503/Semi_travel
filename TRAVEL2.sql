@@ -208,7 +208,7 @@ CREATE SEQUENCE review_seq
     NOCACHE
     NOCYCLE;
 
-//관광지 트리거
+//리뷰 트리거
 CREATE OR REPLACE TRIGGER review_trigger
 BEFORE INSERT ON review
 FOR EACH ROW
