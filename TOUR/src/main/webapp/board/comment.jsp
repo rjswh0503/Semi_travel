@@ -1,0 +1,54 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+  
+   pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    
+
+
+
+
+<%
+    if (session.getAttribute("user_id") != null) {
+%>
+   <!-- 이 자리에 댓글 폼 넣어주기 -->
+   <h1>댓글쓰기</h1>
+    <div class="comment">
+        <input id="commentInput" placeholder="댓글작성하기">
+        <button onclick="addComment()">작성완료</button>
+        <div id="comments">
+            <!-- 댓글이 표시될 장소-->
+        </div>
+    </div>
+   <% 
+   }
+%>
+</body>
+
+<script>
+    function addComment(){
+        const commentInput = document.getElementById("commentInput");
+        const commentText = commentInput.value;
+
+        if(commentText.trim() ===""){
+            alert("댓글을 작성해주세요.");
+            return;
+        }
+
+
+
+        const commentsBox = document.getElementById("comments");
+
+        const commentDIV = document.createElement("div");
+        commentDIV.className ="comment";
+        commentDIV.textContent = commentText;
+
+        commentsBox.appendChild(commentDIV);
+        commentInput.value= " ";
+    }
+</script>
+</html>
