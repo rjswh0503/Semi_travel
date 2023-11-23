@@ -287,19 +287,8 @@ color: #EE9CA7;
 				src="./Image/4.jpg" class="top10" alt=""></a> 
 				
 		</div>
-		<!-- Navbar End -->
+	
 
-
-
-		<!-- Header Start -->
-
-
-
-		<!-- Header End -->
-
-
-
-		<!-- Booking Start -->
 		<nav id="topMenu">
 			<ul>
 				<li class="Menu"><a class="menuLink" href="">»ñÆ÷·Î</a>
