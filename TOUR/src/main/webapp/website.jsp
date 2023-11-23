@@ -375,7 +375,6 @@ color: #EE9CA7;
 </div>
 
 
-		<!-- Blog Start -->
 		
 		
 	<div class="mainImage">	
