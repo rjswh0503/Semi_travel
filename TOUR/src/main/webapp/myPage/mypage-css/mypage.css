@@ -1,0 +1,49 @@
+@charset "EUC-KR";
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('3\ \(1\).jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+h1{
+	font-family: 'Bagel Fat One',sans-serif;
+	color: #ee9ca7;
+	font-size: 100px;
+	
+	text-shadow: 5px 5px 20px #ee9ca7;
+}
+
+
+
+
+
+.total {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 60%;
+}
+
+#cancle{
+    background-color: gray;
+    border-color: gray;
+}
+
+#delete{
+    background-color: red;
+    border-color: red;
+    
+}
+
+.sad{
+    margin-left: 10%;
+}
+
+
+
+
