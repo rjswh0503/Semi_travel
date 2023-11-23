@@ -85,7 +85,11 @@
             // Function to handle the image slider
             function startImageSlider() {
                 setInterval(function () {
+<<<<<<< HEAD
                 	// Fade out the current image
+=======
+                    // Fade out the current image
+>>>>>>> jaeheon
                     images[currentIndex].style.opacity = 0;
 
                     // Move to the next image or go back to the first one

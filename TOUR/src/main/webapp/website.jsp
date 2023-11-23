@@ -287,6 +287,7 @@ color: #EE9CA7;
 				src="./Image/4.jpg" class="top10" alt=""></a> 
 				
 		</div>
+<<<<<<< HEAD
 		<!-- Navbar End -->
 
 
@@ -300,6 +301,10 @@ color: #EE9CA7;
 
 
 		<!-- Booking Start -->
+=======
+	
+
+>>>>>>> jaeheon
 		<nav id="topMenu">
 			<ul>
 				<li class="Menu"><a class="menuLink" href="">»ñÆ÷·Î</a>
@@ -375,6 +380,10 @@ color: #EE9CA7;
 </div>
 
 
+<<<<<<< HEAD
+=======
+		<!-- Blog Start -->
+>>>>>>> jaeheon
 		
 		
 	<div class="mainImage">	
