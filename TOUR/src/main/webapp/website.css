@@ -1,0 +1,214 @@
+@charset "EUC-KR";
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+.top10 {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 75%;
+    height: 500px;
+    margin-bottom: 20px;
+
+}
+
+
+
+#MyHome {
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 500px;
+
+}
+
+
+#topMenu {
+    height: 20px;
+    
+}
+#topMenu ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+#topMenu ul li {
+    color: white;
+    background-color: #EE9CA7;
+    float: left;
+    line-height: 30px;
+    vertical-align:middle;
+    text-align: center;
+    position: relative;
+}
+
+.menuLink, 
+.sub {
+    text-decoration: none;
+    display:block;
+    width: 110px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+.menuLink {
+    color: white;
+    cursor: pointer;
+}
+
+.Menu:hover .menuLink {
+    color: white;
+    background-color: #EE9CA7;
+    
+}
+
+
+.sub {
+    color: #2d2d2d;
+    background-color: white;
+    border: solid 1px black;
+    margin-right: -1px;
+}
+
+
+
+
+.submenu {
+    position: absolute;
+    height: 0;
+    overflow:hidden;
+    transition: height .2s;
+    -o-transition: height .2s;
+    -webkit-transition: height .2s;
+    -moz-transition: height .2s;
+    width: 570px;
+    
+    
+}
+
+.submenu2 {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    transition: height .2s;
+    -o-transition: height .2s;
+    -webkit-transition: height .2s;
+    -moz-transition: height .2s;
+    width: 338px;
+    left: 0;
+    
+    
+    
+}
+
+.submenu3 {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    transition: height .2s;
+    -o-transition: height .2s;
+    -webkit-transition: height .2s;
+    -moz-transition: height .2s;
+    width: 339px;
+    right: 0;
+    
+}
+
+.submenu li {
+    display: inline-block;
+}
+
+.submenu2 li {
+    display:inline-block;
+}
+
+.submenu3 li {
+    display: inline-block;
+}
+
+.Menu:hover .submenu {
+    height: 32px;
+    
+}
+.Menu:hover .submenu2 {
+    height: 32px;
+}
+
+.Menu:hover .submenu3 {
+    height: 32px;
+}
+
+.sub:hover {
+    color: white;
+    background-color: #EE9CA7;
+}
+
+
+#topMenu {
+    width: 900px;
+    margin: 0 auto;
+    
+}
+
+.submenu {
+    float: left;
+    text-align: center;
+    
+    
+}
+
+.submenu2 {
+    float: right;
+    text-align: center;
+}
+
+.submenu3 {
+    float: right;
+    text-align: center;
+}
+
+
+
+
+.Menu {
+    display: inline-block;
+    text-align: center;
+    
+}
+
+.body1 {
+   padding: 100px;
+   margin-top: 200px;
+   text-align:  center;
+}
+
+section {
+    padding: 300px;
+    margin-top: 50px;
+    text-align: center;
+    border: 1px solid #EE9CA7;
+    background-color: #EE9CA7;
+    color: white;
+    
+}
+
+#img {
+    padding: 100px;
+    margin: 50px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #2d2d2d;
+    box-shadow: 5px 5px 5px 5px gray;
+    justify-content: flex-start;
+    cursor: pointer;
+
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
