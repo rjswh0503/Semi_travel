@@ -1,0 +1,94 @@
+@charset "EUC-KR";
+
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+h1{
+    color: #fff;
+    text-align: start;
+    font-family: 'Bagel Fat One', sans-serif;
+    font-size: 100px;
+    text-shadow:  5px 5px 13px #EE9CA7;
+    
+    
+}
+
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('3.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 50px;
+    
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a, span{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+
+ul li a:hover {
+    background-color: #fff;
+    color: #000;
+}
+ul li span:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+
+ul li.active a, span {
+    background-color: #fff;
+    color: #000;
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    } 
+}
+
+@media screen and (min-width: 769px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+
+

@@ -1,0 +1,126 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>마이페이지</title>
+<link rel="stylesheet" href="../myPage/mypage-css/mypage.css">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<script>
+	function showConfirmation1() {
+		alert('비밀번호 변경이 완료되었습니다.');
+	}
+</script>
+
+<script>
+	function showConfirmation2() {
+		alert('취소되었습니다.');
+	}
+</script>
+
+</head>
+<style>
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #EE9CA7;
+    border-color: #EE9CA7;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #EE9CA7;
+    border-color: #EE9CA7;
+    
+    
+    
+}
+
+.btn-primary:hover {
+    color: black;
+    background-color: #EE9CA7;
+    border-color: #EE9CA7;
+    
+}
+</style>
+<body>
+	<form
+		action="<%=request.getContextPath()%>/LoginServlet?action=updatePassword"
+		method="post">
+		<header>
+		<a href="../website.jsp">
+		<h1>떠나조</h1></a>
+			<div class="total">
+				<div class="container light-style flex-grow-1 container-p-y">
+					<h3 class="font-weight-bold py-3 mb-4">마이 페이지</h3>
+
+					<div class="card overflow-hidden">
+						<div class="row no-gutters row-bordered row-border-light">
+							<div class="col-md-3 pt-0">
+								<div class="list-group list-group-flush account-settings-links">
+									<a class="list-group-item list-group-item-action"
+										data-toggle="list" href="user-info.jsp">회원 정보</a> <a
+										class="list-group-item list-group-item-action active"
+										data-toggle="list" href="user_password-edit.jsp">비밀 번호 변경</a>
+									<a class="list-group-item list-group-item-action"
+										data-toggle="list" href="user-post.jsp">내가 쓴 게시글</a>
+									<a class="list-group-item list-group-item-action"
+										data-toggle="list" href="user-delete.jsp">회원 탈퇴</a>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="tab-content">
+									<div class="card-body media align-items-center"></div>
+								</div>
+								<hr class="border-light m-0">
+								<div class="card-body">
+									<div class="form-group">
+										<label class="form-label"> 변경할 비밀번호 입력</label> <input
+											type="password" class="form-control mb-1" name="newPassword">
+									</div>
+
+									<div class="form-group">
+										<label class="form-label"> 변경할 비밀번호 재입력</label> <input
+											type="password" class="form-control mb-1"
+											name="confirmPassword">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-right mt-3">
+						<button type="submit" class="btn btn-primary" id="commit">비밀번호
+							수정</button>
+						<a
+							href="<%=request.getContextPath()%>/myPage/user_password-edit.jsp"><button
+								type="button" class="btn btn-primary" id="cancel">취소</button></a>
+					</div>
+				</div>
+			</div>
+		</header>
+	</form>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const completeButton = document.querySelector('#commit');
+
+			completeButton.addEventListener('click', function() {
+				showConfirmation1();
+			});
+		});
+
+		document.addEventListener('DOMContentLoaded', function() {
+			const cancelButton = document.querySelector('#cancel');
+
+			cancelButton.addEventListener('click', function() {
+				showConfirmation2();
+			});
+		});
+	</script>
+</body>
+</html>
